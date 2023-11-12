@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Widget App</title>
+    <link id="my-link-el" rel="stylesheet" href="s3 bucket styles.css" />
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box; 
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Create a widget.</h1>
+      <hr />
+    </header>
+    <div class="middle-container" style="display: flex;">
+      <div id="widget-customization" style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin-left: 30px;">
+        <form id="builder-form">
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" required /><br />
+          <ul id="suggestions"></ul>
+          <label for="widget-count">Number of Widgets:</label>
+          <select name="number" id="select-number">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <label for="font-color" id="font-color-holder">Buttons Color</label>
+          <input type="color" id="font-color-picker" />
+          <button class="form-btn" id="widget-btn" type="submit">
+            Generate Widgets
+          </button>
+        </form>
+        <div id="widget-code"></div>
+        <button id="copy-code-btn" style="display: none">Copy Code</button>
+        <button id="clear-btn">Clear</button>
+      </div>
+      <div id="preview-container" class="media-query-styles">
+        <div id="widget-container"></div>
+      </div>
+    </div>
+    <script src="s3 bucket index.js" type="module"></script>
+  </body>
+</html>
